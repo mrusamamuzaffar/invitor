@@ -1,0 +1,743 @@
+name: invitor
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.1+2
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  provider: ^6.0.1
+  vibration: ^1.7.4-nullsafety.0
+  sqflite: ^2.0.0+4
+  path: ^1.8.0
+  path_provider: ^2.0.7
+  fluttertoast: ^8.0.8
+  font_awesome_flutter: ^9.1.0
+  animations: ^2.0.2
+  intl: ^0.17.0
+  animated_text_kit: ^4.2.1
+  flutter_slidable: ^0.6.0
+  flutter_ffmpeg: ^0.4.2
+  permission_handler: ^8.3.0
+  share: ^2.0.4
+  open_file: ^3.2.1
+  connectivity_plus: ^2.0.3
+  shared_preferences: ^2.0.9
+  google_mobile_ads: ^1.0.0
+  firebase_core: ^1.10.0
+  firebase_auth: ^3.2.0
+  google_sign_in: ^5.2.1
+  cloud_firestore: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/ring.png
+    - assets/images/login.jpg
+  # main_category: Wedding -> sub_category: Wedding Invitations
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_one.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_one_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_two.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_two_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_three.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_three_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_four.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_four_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_five.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_five_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_six.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_six_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_seven.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_seven_customize.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_eight.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_eight_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_nine.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_nine_customize.jpg
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_ten.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_ten_customize.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_eleven.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_eleven_customize.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_twelve.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_twelve_customize.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_thirteen.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_thirteen_customize.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_fourteen.png
+    - assets/images/wedding/wedding_invitations/wedding_wedding_invitations_fourteen_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_five_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_five.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_four.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_four_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_one.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_one_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_six.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_six_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_three.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_three_customize.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_two.png
+    - assets/images/wedding/bridal_shower/wedding_bridal_shower_two_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_five.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_five_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_four.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_four_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_one.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_one_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_seven.jpg
+    - assets/images/wedding/engagement_party/wedding_engagement_party_seven_customize.jpg
+    - assets/images/wedding/engagement_party/wedding_engagement_party_six.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_six_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_three.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_three_customize.png
+    - assets/images/wedding/engagement_party/wedding_engagement_party_two.jpg
+    - assets/images/wedding/engagement_party/wedding_engagement_party_two_customize.jpg
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_four.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_four_customize.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_one.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_one_customize.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_three.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_three_customize.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_two.png
+    - assets/images/wedding/bachelor_party/wedding_bachelor_party_two_customize.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_one.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_one_customize.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_three.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_three_customize.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_two.png
+    - assets/images/wedding/rehearsal_dinner/wedding_rehearsal_dinner_two_customize.png
+    - assets/images/wedding/save_the_date/wedding_save_the_date_one.png
+    - assets/images/wedding/save_the_date/wedding_save_the_date_one_customize.png
+    - assets/images/wedding/save_the_date/wedding_save_the_date_two.png
+    - assets/images/wedding/save_the_date/wedding_save_the_date_two_customize.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_one.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_one_customize.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_three.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_three_customize.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_two.png
+    - assets/images/birthday/first_birthday/birthday_first_birthday_two_customize.png
+    - assets/images/birthday/baby_birthday/birthday_baby_birthday_one.png
+    - assets/images/birthday/baby_birthday/birthday_baby_birthday_one_customize.png
+    - assets/images/birthday/baby_birthday/birthday_baby_birthday_two.png
+    - assets/images/birthday/baby_birthday/birthday_baby_birthday_two_customize.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_one.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_one_customize.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_one_customize.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_two.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_two_customize.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_three.png
+    - assets/images/birthday/kids_birthday/birthday_kids_birthday_three_customize.png
+    - assets/images/birthday/mens_birthday/birthday_men_birthday_one.png
+    - assets/images/birthday/mens_birthday/birthday_men_birthday_one_customize.png
+    - assets/images/birthday/mens_birthday/birthday_men_birthday_two.png
+    - assets/images/birthday/mens_birthday/birthday_men_birthday_two_customize.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_one_customize.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_one.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_two.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_two_customize.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_three.png
+    - assets/images/birthday/womens_birthday/birthday_women_birthday_three_customize.png
+    - assets/images/party/anniversary/party_anniversary_one.png
+    - assets/images/party/anniversary/party_anniversary_one_customize.png
+    - assets/images/party/anniversary/party_anniversary_two.png
+    - assets/images/party/anniversary/party_anniversary_two_customize.png
+    - assets/images/party/anniversary/party_anniversary_three.png
+    - assets/images/party/anniversary/party_anniversary_three_customize.png
+    - assets/images/party/bbq_party/party_bbq_party_one.png
+    - assets/images/party/bbq_party/party_bbq_party_one_customize.png
+    - assets/images/party/bbq_party/party_bbq_party_two.png
+    - assets/images/party/bbq_party/party_bbq_party_two_customize.png
+    - assets/images/party/christmas_party/party_christmas_party_one.png
+    - assets/images/party/christmas_party/party_christmas_party_one_customize.png
+    - assets/images/party/christmas_party/party_christmas_party_two.png
+    - assets/images/party/christmas_party/party_christmas_party_two_customize.png
+    - assets/images/party/christmas_party/party_christmas_party_three.png
+    - assets/images/party/christmas_party/party_christmas_party_three_customize.png
+    - assets/images/party/christmas_party/party_christmas_party_four.png
+    - assets/images/party/christmas_party/party_christmas_party_four_customize.png
+    - assets/images/party/cocktail_party/party_cocktail_party_one.png
+    - assets/images/party/cocktail_party/party_cocktail_party_one_customize.png
+    - assets/images/party/cocktail_party/party_cocktail_party_two.png
+    - assets/images/party/cocktail_party/party_cocktail_party_two_customize.png
+    - assets/images/party/cocktail_party/party_cocktail_party_three.png
+    - assets/images/party/cocktail_party/party_cocktail_party_three_customize.png
+    - assets/images/party/cocktail_party/party_cocktail_party_four.png
+    - assets/images/party/cocktail_party/party_cocktail_party_four_customize.png
+    - assets/images/party/dinner_party/party_dinner_party_one.png
+    - assets/images/party/dinner_party/party_dinner_party_one_customize.png
+    - assets/images/party/dinner_party/party_dinner_party_two.png
+    - assets/images/party/dinner_party/party_dinner_party_two_customize.png
+    - assets/images/party/dinner_party/party_dinner_party_three.png
+    - assets/images/party/dinner_party/party_dinner_party_three_customize.png
+    - assets/images/party/dinner_party/party_dinner_party_four.png
+    - assets/images/party/dinner_party/party_dinner_party_four_customize.png
+    - assets/images/party/dinner_party/party_dinner_party_five.png
+    - assets/images/party/dinner_party/party_dinner_party_five_customize.png
+    - assets/images/party/family_reunion/party_family_reunion_one.png
+    - assets/images/party/family_reunion/party_family_reunion_one_customize.png
+    - assets/images/party/family_reunion/party_family_reunion_two.png
+    - assets/images/party/family_reunion/party_family_reunion_two_customize.png
+    - assets/images/party/family_reunion/party_family_reunion_three.png
+    - assets/images/party/family_reunion/party_family_reunion_three_customize.png
+    - assets/images/party/graduation_party/party_graduation_party_one.png
+    - assets/images/party/graduation_party/party_graduation_party_one_customize.png
+    - assets/images/party/graduation_party/party_graduation_party_two.png
+    - assets/images/party/graduation_party/party_graduation_party_two_customize.png
+    - assets/images/party/graduation_party/party_graduation_party_three.png
+    - assets/images/party/graduation_party/party_graduation_party_three_customize.png
+    - assets/images/party/happy_new_year/party_happy_new_year_one.png
+    - assets/images/party/happy_new_year/party_happy_new_year_one_customize.png
+    - assets/images/party/happy_new_year/party_happy_new_year_two.png
+    - assets/images/party/happy_new_year/party_happy_new_year_two_customize.png
+    - assets/images/party/house_warming/party_house_warming_one.png
+    - assets/images/party/house_warming/party_house_warming_one_customize.png
+    - assets/images/party/house_warming/party_house_warming_two.png
+    - assets/images/party/house_warming/party_house_warming_two_customize.png
+    - assets/images/party/house_warming/party_house_warming_three.png
+    - assets/images/party/house_warming/party_house_warming_three_customize.png
+    - assets/images/party/retirement_party/party_retirement_party_one.png
+    - assets/images/party/retirement_party/party_retirement_party_one_customize.png
+    - assets/images/party/retirement_party/party_retirement_party_two.png
+    - assets/images/party/retirement_party/party_retirement_party_two_customize.png
+    - assets/images/party/sleepover_party/party_sleepover_party_one.png
+    - assets/images/party/sleepover_party/party_sleepover_party_one_customize.png
+    - assets/images/party/sleepover_party/party_sleepover_party_two.png
+    - assets/images/party/sleepover_party/party_sleepover_party_two_customize.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_one.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_one_customize.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_two.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_two_customize.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_three.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_three_customize.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_four.png
+    - assets/images/party/summer_and_pool/party_summer_and_pool_four_customize.png
+    - assets/images/announcements/birth/announcements_birth_one.png
+    - assets/images/announcements/birth/announcements_birth_one_customize.png
+    - assets/images/announcements/birth/announcements_birth_two.png
+    - assets/images/announcements/birth/announcements_birth_two_customize.png
+    - assets/images/announcements/engagement/announcements_engagement_one.png
+    - assets/images/announcements/engagement/announcements_engagement_one_customize.png
+    - assets/images/announcements/engagement/announcements_engagement_two.png
+    - assets/images/announcements/engagement/announcements_engagement_two_customize.png
+    - assets/images/announcements/engagement/announcements_engagement_three.png
+    - assets/images/announcements/engagement/announcements_engagement_three_customize.png
+    - assets/images/announcements/graduation/announcements_graduation_one.png
+    - assets/images/announcements/graduation/announcements_graduation_one_customize.png
+    - assets/images/announcements/graduation/announcements_graduation_two.png
+    - assets/images/announcements/graduation/announcements_graduation_two_customize.png
+    - assets/images/announcements/graduation/announcements_graduation_three.png
+    - assets/images/announcements/graduation/announcements_graduation_three_customize.png
+    - assets/images/announcements/memorial/announcements_memorial_one.png
+    - assets/images/announcements/memorial/announcements_memorial_one_customize.png
+    - assets/images/announcements/memorial/announcements_memorial_two.png
+    - assets/images/announcements/memorial/announcements_memorial_two_customize.png
+    - assets/images/announcements/moving/announcements_moving_one.png
+    - assets/images/announcements/moving/announcements_moving_one_customize.png
+    - assets/images/announcements/moving/announcements_moving_two.png
+    - assets/images/announcements/moving/announcements_moving_two_customize.png
+    - assets/images/announcements/pregnancy/announcements_pregnancy_one.png
+    - assets/images/announcements/pregnancy/announcements_pregnancy_one_customize.png
+    - assets/images/announcements/pregnancy/announcements_pregnancy_two.png
+    - assets/images/announcements/pregnancy/announcements_pregnancy_two_customize.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_one.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_one_customize.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_two.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_two_customize.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_three.png
+    - assets/images/announcements/save_the_date/announcements_save_the_date_three_customize.png
+    - assets/images/announcements/wedding/announcements_wedding_one.png
+    - assets/images/announcements/wedding/announcements_wedding_one_customize.png
+    - assets/images/announcements/wedding/announcements_wedding_two.png
+    - assets/images/announcements/wedding/announcements_wedding_two_customize.png
+    - assets/images/announcements/wedding/announcements_wedding_three.png
+    - assets/images/announcements/wedding/announcements_wedding_three_customize.png
+    - assets/images/babies_and_kids/first_birthday/babies_and_kids_first_birthday_one.png
+    - assets/images/babies_and_kids/first_birthday/babies_and_kids_first_birthday_one_customize.png
+    - assets/images/babies_and_kids/first_birthday/babies_and_kids_first_birthday_two.png
+    - assets/images/babies_and_kids/first_birthday/babies_and_kids_first_birthday_two_customize.png
+    - assets/images/babies_and_kids/baby_birthday/babies_and_kids_baby_birthday_one.png
+    - assets/images/babies_and_kids/baby_birthday/babies_and_kids_baby_birthday_one_customize.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_one.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_one_customize.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_two.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_two_customize.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_three.png
+    - assets/images/babies_and_kids/baby_shower/babies_and_kids_baby_shower_three_customize.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_one.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_one_customize.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_two.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_two_customize.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_three.png
+    - assets/images/babies_and_kids/baby_sprinkle/babies_and_kids_baby_sprinkle_three_customize.png
+    - assets/images/babies_and_kids/baptism_and_christening/babies_and_kids_baptism_and_christening_one.png
+    - assets/images/babies_and_kids/baptism_and_christening/babies_and_kids_baptism_and_christening_one_customize.png
+    - assets/images/babies_and_kids/baptism_and_christening/babies_and_kids_baptism_and_christening_two.png
+    - assets/images/babies_and_kids/baptism_and_christening/babies_and_kids_baptism_and_christening_two_customize.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_one.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_one_customize.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_two.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_two_customize.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_three.png
+    - assets/images/babies_and_kids/first_communion/babies_and_kids_first_communion_three_customize.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_one.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_one_customize.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_two.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_two_customize.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_three.png
+    - assets/images/babies_and_kids/gender_reveal/babies_and_kids_gender_reveal_three_customize.png
+    - assets/images/babies_and_kids/kids_birthday/babies_and_kids_kids_birthday_one.png
+    - assets/images/babies_and_kids/kids_birthday/babies_and_kids_kids_birthday_one_customize.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_one_customize.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_one.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_two.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_two_customize.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_three.png
+    - assets/images/babies_and_kids/sip_and_see/babies_and_kids_sip_and_see_three_customize.png
+    - assets/images/animated_text_gifs/colorize.gif
+    - assets/images/animated_text_gifs/fade.gif
+    - assets/images/animated_text_gifs/flicker.gif
+    - assets/images/animated_text_gifs/rotate.gif
+    - assets/images/animated_text_gifs/scale.gif
+    - assets/images/animated_text_gifs/text_liquid_fill.gif
+    - assets/images/animated_text_gifs/type_writer.gif
+    - assets/images/animated_text_gifs/typer.gif
+    - assets/images/animated_text_gifs/wavy.gif
+    - assets/images/no_data_found/no_data_found.png
+    - assets/images/google_logo.png
+    - assets/images/watermark.png
+    - assets/images/invitor_logo.png
+    - assets/images/announcement.png
+    - assets/images/babies_and_kids.png
+    - assets/images/birthday.png
+    - assets/images/party.png
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: PlayfairDisplay
+      fonts:
+        - asset: fonts/playfair_display_variable_font_weight.ttf
+    ###############################################################################
+    - family: Billabong
+      fonts:
+        - asset: fonts/billabong.ttf
+    ###############################################################################
+    - family: Arimo
+      fonts:
+        - asset: fonts/arimo_regular.ttf
+    ###############################################################################
+    - family: TeXGyreTermes
+      fonts:
+        - asset: fonts/tex_gyretermes_regular.otf
+    ###############################################################################
+    - family: GreatVibes
+      fonts:
+        - asset: fonts/great_vibes_regular.ttf
+    ###############################################################################
+    - family: LearningCurvePro
+      fonts:
+        - asset: fonts/learning_curve_pro.ttf
+    ###############################################################################
+    - family: OpenSans
+      fonts:
+        - asset: fonts/open_sans_light.ttf
+    ###############################################################################
+    - family: OpenSansBold
+      fonts:
+        - asset: fonts/open_sans_bold.ttf
+    ###############################################################################
+    - family: COM4t
+      fonts:
+        - asset: fonts/com_four_t_fine_regular.ttf
+    ###############################################################################
+    - family: MountainsOfChristmas
+      fonts:
+        - asset: fonts/mountains_of_christmas_regular.ttf
+    ###############################################################################
+    - family: Quicksand
+      fonts:
+        - asset: fonts/quicksand_book.otf
+    ###############################################################################
+    - family: QuicksandBold
+      fonts:
+        - asset: fonts/quicksand_bold.otf
+    ###############################################################################
+    - family: AdeliciaScript
+      fonts:
+        - asset: fonts/adelicia_script.ttf
+    ###############################################################################
+    - family: Parisienne
+      fonts:
+        - asset: fonts/parisienne_regular.ttf
+    ###############################################################################
+    - family: PatrickHand
+      fonts:
+        - asset: fonts/patrick_hand.otf
+    ###############################################################################
+    - family: SpicyRice
+      fonts:
+        - asset: fonts/spicy_rice_regular.otf
+    ###############################################################################
+    - family: JennaSue
+      fonts:
+        - asset: fonts/jenna_sue.ttf
+    ###############################################################################
+    - family: JosefinSlab
+      fonts:
+        - asset: fonts/josefin_slab_regular.ttf
+    ###############################################################################
+    - family: LuckiestGuy
+      fonts:
+        - asset: fonts/luckiest_guy.ttf
+    ###############################################################################
+    - family: Lato
+      fonts:
+        - asset: fonts/lato_regular.ttf
+    ###############################################################################
+    - family: Cinzel
+      fonts:
+        - asset: fonts/cinzel_regular.otf
+    ###############################################################################
+    - family: AmaticSC
+      fonts:
+        - asset: fonts/amaticsc_regular.ttf
+    ###############################################################################
+    - family: Lobster
+      fonts:
+        - asset: fonts/lobster.otf
+    ###############################################################################
+    - family: MerriWeather
+      fonts:
+        - asset: fonts/merriweather_italic.ttf
+    ###############################################################################
+    - family: ChopinScript
+      fonts:
+        - asset: fonts/chopin_script.otf
+    ###############################################################################
+    - family: Courgette
+      fonts:
+        - asset: fonts/courgette_regular.ttf
+    ###############################################################################
+    - family: RozhaOne
+      fonts:
+        - asset: fonts/rozha_one_regular.ttf
+    ###############################################################################
+    - family: AlexBrush
+      fonts:
+        - asset: fonts/alexbrush_regular.ttf
+    ###############################################################################
+    - family: Aspire
+      fonts:
+        - asset: fonts/aspire.ttf
+    ###############################################################################
+    - family: Angelina
+      fonts:
+        - asset: fonts/angelina.TTF
+    ###############################################################################
+    - family: Meddon
+      fonts:
+        - asset: fonts/meddon.ttf
+    ###############################################################################
+    - family: Yesteryear
+      fonts:
+        - asset: fonts/yesteryear_regular.ttf
+    ###############################################################################
+    - family: Ardeco
+      fonts:
+        - asset: fonts/ardeco.ttf
+    ###############################################################################
+    - family: Sail
+      fonts:
+        - asset: fonts/sail_regular.otf
+    ###############################################################################
+    - family: VastShadow
+      fonts:
+        - asset: fonts/vast_shadow_regular.ttf
+    ###############################################################################
+    - family: RibeyeMarrow
+      fonts:
+        - asset: fonts/ribeye_marrow_regular.ttf
+    ###############################################################################
+    - family: LetTrace
+      fonts:
+        - asset: fonts/let_trace_basic.otf
+    ###############################################################################
+    - family: Intuitive
+      fonts:
+        - asset: fonts/intuitive.ttf
+    ###############################################################################
+    - family: Kreon
+      fonts:
+        - asset: fonts/kreon_regular.ttf
+    ###############################################################################
+    - family: KreonBold
+      fonts:
+        - asset: fonts/kreon_bold.ttf
+    ###############################################################################
+    - family: Libre
+      fonts:
+        - asset: fonts/libre_baskerville_regular.ttf
+    ###############################################################################
+    - family: Libreitalic
+      fonts:
+        - asset: fonts/libre_baskerville_italic.ttf
+    ###############################################################################
+    - family: BeBright
+      fonts:
+        - asset: fonts/be_bright.ttf
+    ###############################################################################
+    - family: BraydenScript
+      fonts:
+        - asset: fonts/brayden_script_regular.otf
+    ###############################################################################
+    - family: BlingtasticScript
+      fonts:
+        - asset: fonts/blingtastic_script.ttf
+    ###############################################################################
+    - family: Bentham
+      fonts:
+        - asset: fonts/bentham.otf
+    ###############################################################################
+    - family: StintUltra
+      fonts:
+        - asset: fonts/stint_ultra_expanded_regular.ttf
+    ###############################################################################
+    - family: Cheque
+      fonts:
+        - asset: fonts/cheque_regular.otf
+    ###############################################################################
+    - family: Engry
+      fonts:
+        - asset: fonts/engry.otf
+    ###############################################################################
+    - family: AmeliaGiovani
+      fonts:
+        - asset: fonts/amelia_giovani.otf
+    ###############################################################################
+    - family: Bellasia
+      fonts:
+        - asset: fonts/bellasia.ttf
+    ###############################################################################
+    - family: CathiyBetiey
+      fonts:
+        - asset: fonts/cathiy_betiey.ttf
+    ###############################################################################
+    - family: Sleeplesson
+      fonts:
+        - asset: fonts/sleeplesson_regular.ttf
+    ###############################################################################
+    - family: MonsieurLaDoulaise
+      fonts:
+        - asset: fonts/monsieurladoulaise.ttf
+    ###############################################################################
+    - family: AllianaScript
+      fonts:
+        - asset: fonts/alliana_script.ttf
+    ###############################################################################
+    - family: Oswald
+      fonts:
+        - asset: fonts/oswald_light.ttf
+    ###############################################################################
+    - family: Playfair
+      fonts:
+        - asset: fonts/playfair_display_bold.ttf
+    ###############################################################################
+    - family: Shellia
+      fonts:
+        - asset: fonts/shellia.ttf
+    ###############################################################################
+    - family: Mottona
+      fonts:
+        - asset: fonts/mottona.otf
+    ###############################################################################
+    - family: Handkerchief
+      fonts:
+        - asset: fonts/handkerchief.ttf
+    ###############################################################################
+    - family: Aerotis
+      fonts:
+        - asset: fonts/aerotis.ttf
+    ###############################################################################
+    - family: BlackChancery
+      fonts:
+        - asset: fonts/black_chancery.TTF
+    ###############################################################################
+    - family: Cambria
+      fonts:
+        - asset: fonts/cambria.ttf
+    ###############################################################################
+    - family: Constantia
+      fonts:
+        - asset: fonts/constantia.ttf
+    ###############################################################################
+    - family: FranklinGothicMedium
+      fonts:
+        - asset: fonts/franklin_gothic_medium.ttf
+    ###############################################################################
+    - family: LittleLordFontleroy
+      fonts:
+        - asset: fonts/little_lord_fontleroy.ttf
+    ###############################################################################
+    - family: Nature
+      fonts:
+        - asset: fonts/nature.ttf
+    ###############################################################################
+    - family: Parisienne
+      fonts:
+        - asset: fonts/parisienne.ttf
+    ###############################################################################
+    - family: Majalla
+      fonts:
+        - asset: fonts/majalla.ttf
+    ###############################################################################
+    - family: Anydore
+      fonts:
+        - asset: fonts/anydore.otf
+    ###############################################################################
+    - family: Bungasai
+      fonts:
+        - asset: fonts/bungasai.ttf
+    ###############################################################################
+    - family: Georgia
+      fonts:
+        - asset: fonts/georgia.ttf
+    ###############################################################################
+    - family: MfWeddingBells
+      fonts:
+        - asset: fonts/mfweddingbells.ttf
+    ###############################################################################
+    - family: Acumin
+      fonts:
+        - asset: fonts/acumin.otf
+    ###############################################################################
+    - family: ClubParty
+      fonts:
+        - asset: fonts/clubparty.ttf
+    ###############################################################################
+    - family: Comic
+      fonts:
+        - asset: fonts/comic.TTF
+    ###############################################################################
+    - family: ArialNarrowRegular
+      fonts:
+        - asset: fonts/arialnarrowregular.ttf
+    ###############################################################################
+    - family: MagnoliaMonogram
+      fonts:
+        - asset: fonts/magnoliamonogram.ttf
+    ###############################################################################
+    - family: FuturaBold
+      fonts:
+        - asset: fonts/futurabold.ttf
+    ###############################################################################
+    - family: Blacksword
+      fonts:
+        - asset: fonts/blacksword.otf
+    ###############################################################################
+    - family: Bahnschrift
+      fonts:
+        - asset: fonts/bahnschrift.TTF
+    ###############################################################################
+    - family: AdineKirnberg
+      fonts:
+        - asset: fonts/adinekirnberg.ttf
+    ###############################################################################
+    - family: AngelTears
+      fonts:
+        - asset: fonts/angeltears.ttf
+    ###############################################################################
+    - family: Candara
+      fonts:
+        - asset: fonts/candara.ttf
+    ###############################################################################
+    - family: Darleston
+      fonts:
+        - asset: fonts/darleston.otf
+    ###############################################################################
+    - family: LucidaConsole
+      fonts:
+        - asset: fonts/lucidaconsole.TTF
+    ###############################################################################
+    - family: MVBoli
+      fonts:
+        - asset: fonts/mvboli.ttf
+    ###############################################################################
+    - family: Sacramento
+      fonts:
+        - asset: fonts/sacramento.ttf
+    ###############################################################################
+    - family: FuturaLtBT
+      fonts:
+        - asset: fonts/futuraltbt.ttf
+    ###############################################################################
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
