@@ -16,7 +16,7 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 ✔️ 37 categories <br />
 ✔️ 5 main categories <br />
 ✔️ Date, Time, RSVP <br />
-✔️ beautiful and awesome card in each category <br />
+✔️ Beautiful and awesome card in each category <br />
 ✔️ Custom animation <br />
 ✔️ Custom animation <br />
 ✔️ Multiple fonts <br />
@@ -25,11 +25,11 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 ✔️ Multiple text animations <br />
 ✔️ Contact book (online + offline) support <br />
 ✔️ Gallary <br />
-✔️ share via whatsapp <br />
-✔️ animation to video <br />
+✔️ Share via whatsapp <br />
+✔️ Animation to video <br />
 ✔️ Picture <br />
 ✔️ GIF <br />
-✔️ customization on card <br />
+✔️ Customization on card <br />
 
 ## Online databse
 ✔️ Firebase <br/>
