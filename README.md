@@ -12,7 +12,7 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 ✔️ Provider <br />
 ✔️ Custom <br />
 
-# Features
+## Features
 ✔️ 37 categories <br />
 ✔️ 5 main categories <br />
 ✔️ Date, Time, RSVP <br />
@@ -31,12 +31,12 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 ✔️ GIF <br />
 ✔️ customization on card <br />
 
-# Online databse
+## Online databse
 ✔️ Firebase <br/>
 ✔️ Google authentication <br/>
 ✔️ Firestore <br/>
 
-# Offline databse
+## Offline databse
 ✔️ SQLite <br/>
 
 
