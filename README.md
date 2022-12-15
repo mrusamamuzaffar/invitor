@@ -10,7 +10,6 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 
 ## State Management
 ✔️ Provider <br />
-✔️ Custom <br />
 
 ## Features
 ✔️ 37 categories <br />
