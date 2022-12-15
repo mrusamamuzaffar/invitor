@@ -51,12 +51,12 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
     src="https://user-images.githubusercontent.com/101565812/207779781-2508e192-c0dc-4af6-ad67-f87233e70a9c.gif">
 </p>
 
-## Invitor app - Home Screen - Categories
+## Invitor app - Categories - Form Fields
 
 <p align="center">
   <img 
     width=40%
     height=40%
-    src="https://user-images.githubusercontent.com/101565812/207779781-2508e192-c0dc-4af6-ad67-f87233e70a9c.gif">
+    src="https://user-images.githubusercontent.com/101565812/207791326-b5f8a223-157a-42b4-94b9-225db112a260.gif">
 </p>
 
