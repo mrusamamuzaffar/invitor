@@ -60,7 +60,7 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
     src="https://user-images.githubusercontent.com/101565812/207791326-b5f8a223-157a-42b4-94b9-225db112a260.gif">
 </p>
 
-## Invitor app - Data Entering
+## Invitor app - Data Entering 1
 
 <p align="center">
   <img 
@@ -69,7 +69,7 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
     src="https://user-images.githubusercontent.com/101565812/207832079-b7d7c5da-8604-4a2c-8436-da10e25c47ed.gif">
 </p>
 
-## Invitor app - 
+## Invitor app - Data Entering 2
 
 <p align="center">
   <img 
