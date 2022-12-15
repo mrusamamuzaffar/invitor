@@ -97,22 +97,22 @@ which Includes beautiful card, custom animation, custom styling, animation to vi
 </p>
 
 
-## Invitor app - Card 
+## Invitor app - Card Customization 
 
 <p align="center">
   <img 
     width=40%
     height=40%
-    src="">
+    src="https://user-images.githubusercontent.com/101565812/207837865-8bba96e6-f835-4028-ad6c-e2167ba978f2.gif">
 </p>
 
-
-## Invitor app - Card 
+ 
+## Invitor app - Animation to Video / Image / GIF Process
 
 <p align="center">
   <img 
     width=40%
     height=40%
-    src="">
+    src="https://user-images.githubusercontent.com/101565812/207838146-d0ee040b-1925-4f94-8d8d-baa47e41ffd9.gif">
 </p>
 
